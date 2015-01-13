@@ -4,11 +4,21 @@ public class PriorityQueue {
 	private Node head;
 	private Node tail;
 	
+	/**
+	 * Konstruktor bez parametara
+	 */
+	
 	public PriorityQueue()
 	{
 		this.head = head;
 		this.tail = tail;
 	}
+	
+	/**
+	 * Metoda koja dodaje novi element sortirano po priority varijabli
+	 * @param value
+	 * @param priority
+	 */
 	
 	public void push(int value, int priority)
 	{
@@ -34,6 +44,11 @@ public class PriorityQueue {
 		}
 	}
 	
+	/**
+	 * Metoda koja uklanja prvi element i ispisuje njegovu vrijednost
+	 * @return value
+	 */
+	
 	public int pop()
 	{
 		if (isEmpty() == true)
@@ -49,6 +64,11 @@ public class PriorityQueue {
 		return value;
 	}
 	
+	/**
+	 * Metoda koja ispisuje prvi element
+	 * @return value
+	 */
+	
 	public int peek()
 	{
 		if (isEmpty() == true)
@@ -58,6 +78,11 @@ public class PriorityQueue {
 		return head.value;
 	}
 	
+	/**
+	 * Metoda koja provjerava da li je lista prazna
+	 * @return boolean
+	 */
+	
 	public boolean isEmpty()
 	{
 		if (head == null)
@@ -66,6 +91,10 @@ public class PriorityQueue {
 		}
 		return false;
 	}
+	
+	/**
+	 * Metoda koja vraća string sa svim elementima
+	 */
 	
 	public String toString()
 	{
@@ -79,11 +108,23 @@ public class PriorityQueue {
 		return str;
 	}
 	
+	/**
+	 * Node klasa
+	 * @author gordansajevic
+	 *
+	 */
+	
 	private class Node
 	{
 		private int value;
 		private Node next;
 		private int priority;
+		
+		/**
+		 * Konstruktor sa dva parametra
+		 * @param value
+		 * @param priority
+		 */
 		
 		public Node(int value, int priority)
 		{
@@ -91,6 +132,13 @@ public class PriorityQueue {
 			this.priority = priority;
 			this.next = null;
 		}
+		
+		/**
+		 * Konstruktor sa tri parametra
+		 * @param value
+		 * @param priority
+		 * @param next
+		 */
 		
 		public Node(int value, int priority, Node next)
 		{

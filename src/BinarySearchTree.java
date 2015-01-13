@@ -3,10 +3,19 @@ public class BinarySearchTree {
 	
 	private Node root;
 	
+	/**
+	 * Konstruktor bez parametara
+	 */
+	
 	public BinarySearchTree()
 	{
 		this.root = null;
 	}
+	
+	/**
+	 * Rekurzivna metoda koja dodaje nove elemente rekurzivno
+	 * @param value
+	 */
 	
 	public void add(int value)
 	{
@@ -43,6 +52,10 @@ public class BinarySearchTree {
 		
 	}
 	
+	/**
+	 * Rekurzivna metoda koja ispisuje sve elemente
+	 */
+	
 	public void printTree()
 	{
 		if (root == null)
@@ -62,6 +75,11 @@ public class BinarySearchTree {
 		System.out.println(current.value);
 		printTree(current.right);
 	}
+	/**
+	 * Rekurzivna metoda koja ispituje da li stablo sadrži jedan određeni element
+	 * @param value
+	 * @return
+	 */
 	
 	public boolean contains(int value)
 	{
@@ -96,11 +114,22 @@ public class BinarySearchTree {
 		return false;
 	}
 	
+	/**
+	 * Node klasa
+	 * @author gordansajevic
+	 *
+	 */
+	
 	private class Node
 	{
 		private int value;
 		private Node left;
 		private Node right;
+		
+		/**
+		 * Konstruktor sa jednim parametrom
+		 * @param value
+		 */
 		
 		public Node(int value)
 		{
